@@ -1,0 +1,91 @@
+<mvc:View controllerName="Recipes.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" displayBlock="true" xmlns:l="sap.ui.layout">
+	<App id="app">
+		<pages>
+	         <Page id="mainPage" title="Some super cool recipes...">
+	            <content>
+					<List headerText="All Recipes" class="sapUiResponsiveMargin" width="auto" items="{path : 'recipe>/recipes'}" >
+						<items>
+							<ObjectListItem title="{recipe>name}" icon="{recipe>image}" type="Navigation" press="onListItemPress">
+								<attributes>
+									<ObjectAttribute text="{recipe>description}" />
+								</attributes>
+							</ObjectListItem>
+						</items>
+					</List>
+	            </content>
+	            <footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+	            		<Text text="© Made by Svetoslav Spasov"></Text>
+						<ToolbarSpacer width="5%"/>
+	            	</Toolbar>
+	            </footer>
+	         </Page>
+	         <Page id="detailsPage" showNavButton="true" title="Recipe" navButtonTap="onNavBack">
+	         		<Panel width="auto" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title text="{recipe>name}"/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<l:HorizontalLayout>
+								<Image src="{recipe>image}" densityAware="false" width="300px" />
+								<ToolbarSpacer width="20px"></ToolbarSpacer>
+								<l:VerticalLayout width="800px">
+									<Label text="Description:" design="Bold" />
+									<Text text="{recipe>description}" class="sapUiSmallMarginBottom" />
+									<l:HorizontalLayout>
+						         		<Label text="Category:" class="sapUiSmallMarginBottom" design="Bold" />
+										<ToolbarSpacer width="5px"/>
+						         		<Text text="{recipe>category}"></Text>
+					         		</l:HorizontalLayout>
+									<l:HorizontalLayout>
+						         		<Label text="Created By:" class="sapUiSmallMarginBottom" design="Bold" />
+										<ToolbarSpacer width="5px"/>
+						         		<Text text="{recipe>createdBy}"></Text>
+					         		</l:HorizontalLayout>
+									<l:HorizontalLayout>
+						         		<Label text="Created On:" class="sapUiSmallMarginBottom" design="Bold" />
+										<ToolbarSpacer width="5px"/>
+						         		<Text text="{recipe>createdOn}"></Text>
+					         		</l:HorizontalLayout>
+									<l:HorizontalLayout>
+						         		<Label text="Preparation Time:" class="sapUiSmallMarginBottom" design="Bold" />
+										<ToolbarSpacer width="5px"/>
+						         		<Text text="{recipe>preparationTime}"></Text>
+					         		</l:HorizontalLayout>
+									<l:HorizontalLayout>
+						         		<Label text="Yield:" class="sapUiSmallMarginBottom" design="Bold" />
+										<ToolbarSpacer width="5px"/>
+						         		<Text text="{recipe>yield}"></Text>
+					         		</l:HorizontalLayout>
+         							<RatingIndicator maxValue="5" value="{recipe>rating}" change="onRate"/>
+								</l:VerticalLayout>
+							</l:HorizontalLayout>
+						</content>
+					</Panel>
+					<Panel width="auto" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title text="Ingredients"/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<Text text="{recipe>ingredients}"></Text>
+						</content>
+					</Panel>
+					<Panel width="auto" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title text="Preparation"/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<Text text="{recipe>preparation}"></Text>
+						</content>
+					</Panel>
+	         </Page>
+	      </pages>
+      </App>
+</mvc:View>

@@ -1,0 +1,66 @@
+{
+    "resources": [
+        {
+            "name": "view/Main.view.xml"
+        },
+        {
+            "name": "controller/Main.controller.js"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "recipes.json"
+        },
+        {
+            "name": "images/blueberry-cheesecake-ice-cream-sl-x.jpg"
+        },
+        {
+            "name": "images/bourbon-butter-salted-pecan-ice-cream-sl.jpg"
+        },
+        {
+            "name": "images/chicken-broccoli-brown-rice-casserole-ck.jpg"
+        },
+        {
+            "name": "images/chicken-enchilada-casserole-ck.jpg"
+        },
+        {
+            "name": "images/grilled-chicken-strawberry-salad-cl-x.jpg"
+        },
+        {
+            "name": "images/grilled-salmon-caesar-salad-cl-x.jpg"
+        },
+        {
+            "name": "images/shrimp-snap-pea-chervil-salad-su-x.jpg"
+        },
+        {
+            "name": "images/strawberry-basil-ice-cream-sl.jpg"
+        },
+        {
+            "name": "images/background.jpg"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}
